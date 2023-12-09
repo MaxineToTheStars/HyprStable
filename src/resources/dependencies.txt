@@ -6,6 +6,7 @@ glslang-dev
 hwdata
 libdrm-dev
 libegl-dev
+libegl1-mesa-dev
 libinput-dev
 libliftoff-dev
 libx11-dev
