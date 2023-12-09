@@ -57,7 +57,7 @@ function _installer_build_clone_packages() {
 	# Set-up build
 	meson setup build/
 	# Build
-	ninja -C build/
+	ninja -C build/ install
 
 	# Go up a directory
 	cd ..
@@ -76,7 +76,7 @@ function _installer_build_clone_packages() {
 	# Configure the build
 	./configure --disable-silent-rules
 	# Build
-	make
+	make install
 	# Sanity check
 	make check
 
