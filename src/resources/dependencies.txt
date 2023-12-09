@@ -39,3 +39,5 @@ ninja-build
 libpkgconf-dev
 libtomlplusplus-dev
 x11proto-dev
+dh-autoreconf
+xutils-dev 
