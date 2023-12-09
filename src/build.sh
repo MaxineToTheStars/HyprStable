@@ -43,8 +43,8 @@ function _installer_install_dependencies() {
 	sudo apt-get install $(awk '{print $1}' ./resources/dependencies.txt) --assume-yes --verbose-versions --show-progress
 
 	# Git clone additional dependencies
-	git clone https://gitlab.freedesktop.org/emersion/libdisplay-info.git ./build
-	git clone --recursive https://gitlab.freedesktop.org/xorg/lib/libxcb-errors.git ./build
+	git clone https://gitlab.freedesktop.org/emersion/libdisplay-info.git ./build/libdisplay-info
+	git clone --recursive https://gitlab.freedesktop.org/xorg/lib/libxcb-errors.git ./build/libxcb-errors
 }
 
 function _installer_build_clone_packages() {
@@ -70,7 +70,7 @@ function _installer_build_clone_packages() {
 
 	# Update build info
 	autoupdate
-	# Set-up build
+	# Set-up build (Has to be ran twice because of black magic or something)
 	autoreconf --install --verbose --force
 	autoreconf --install --verbose --force
 	# Configure the build
